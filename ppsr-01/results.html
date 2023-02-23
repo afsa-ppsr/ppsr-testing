@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+    <title>PPSR Car Check - Search Results</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="../ppsr-src/script/jquery-3.6.1.min.js"></script>
+
+    <meta name="viewport" content="initial-scale=1">
+    <script type="text/javascript">
+        function display_content(e){
+            if (e.classList.contains("arrow-down")){
+                // change symbol
+                e.classList.remove("arrow-down");
+                e.classList.add("arrow-side");
+                // hide content
+                var content = e.parentElement.parentElement.getElementsByClassName("content-minor")[0];
+                content.classList.remove("content-minor");
+                content.classList.add("content-hidden");
+                //change bottom corners to curved
+                var div = e.parentElement;
+                div.classList.add("hidden");
+                div.classList.remove("expanded");
+            } else {
+                e.classList.remove("arrow-side");
+                e.classList.add("arrow-down");
+                var content = e.parentElement.parentElement.getElementsByClassName("content-hidden")[0];
+                content.classList.remove("content-hidden");
+                content.classList.add("content-minor");
+                //change bottom corners to straight
+                var div = e.parentElement;
+                div.classList.remove("hidden");
+                div.classList.add("expanded");
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+  <div class="wrapper">
+      <section class="header">
+        <img src="ppsr_logo_01.svg" />
+      </section>
+      <section class="main">
+        <div class="intro">
+            <hr>
+            <h1><img src="favicon.ico" alt="PPSR logo" height="18"> PPSR Car Check <span>beta</span></h1>
+          </div>
+        <div class="content">
+            <h2>Vehicle searched</h2>
+            <div class="car-info information">
+                <div class="header-minor expanded">
+                    <img class="icon" src="icons/icon_car.svg">
+                    <h3>VIN: 10000000000000000</h3>
+                    <div class="accordion arrow-down" onclick="display_content(this);"></div>
+                </div>
+                <div class="content-minor">
+                    <p>
+                        <span>Vehicle type:</span><span> CAR/SMALL PASSENGER</span>
+                    </p>
+                    <p>
+                        <span>Make:</span><span> HYUNDAI</span>
+                    </p>
+                    <p>
+                        <span>Colour:</span><span> BLUE</span>
+                    </p>
+                    <p>
+                        <span>Year:</span><span> 2020</span>
+                    </p>
+                </div>
+            </div>
+
+            <h2>Vehicle results</h2>
+            <div class="free-from-debt information">
+                <div class="header-minor expanded">
+                    <img class="icon" src="icons/icon_tick.svg">
+                    <h3>Free from debt</h3>
+                    <div class="accordion arrow-down" onclick="display_content(this);"></div>
+                </div>
+                <div class="content-minor">
+                    <section>
+                        <p>There are no security interests (like a secured car loan) registered on the PPSR against the VIN of this car.</p>
+                    </section>
+                    <section>
+                        <p>Download your <a href="sample-PPSR-search-certificate.pdf">search certificate</a>.</p>
+                    </section>
+                    <section>
+                        <p>While there are certain protections in place for people who buy cars following a clear PPSR search, there are some exceptions.</p>
+                    </section>
+                    <section>
+                        <p>Find out <a href="#">more</a>.</p>
+                    </section>
+                </div>
+            </div>
+
+            <div class="stolen information">
+                <div class="header-minor hidden">
+                    <img class="icon" src="icons/icon_tick.svg">
+                    <h3>Not recorded as stolen</h3>
+                    <div class="accordion arrow-side" onclick="display_content(this);"></div>
+                </div>
+                <div class="content-hidden">
+                    <p>There are stolen details recorded against this vehicle.</p>
+                    <p>Stolen data is recorded by state and territory police departments.</p>
+                    <p>To find out more about this stolen vehicle notification, please call the Police Assistance Line on 111 and quote the reference number.</p>
+                </div>
+            </div>
+
+            <div class="safety-recall information">
+                <div class="header-minor expanded">
+                    <img class="icon" src="icons/icon_alert.svg">
+                    <h3>Vehicle safety recall recorded</h3>
+                    <div class="accordion arrow-down" onclick="display_content(this);"></div>
+                </div>
+                <div class="content-minor">
+                    <section>
+                        <p><span>Status:</span> Contact manufacturer</p>
+                        <p><span>Safety recall number:</span> REC-005458</p>
+                        <p><span>Published Date:</span> 27 June 2022</p>
+                    <p><span>Defects:</span> Due to a manufacturing issue, the connector to the Heater Core may overheat due to a faulty electrical connection. This may cause excess heat in the connection. If this occurs it may result in a vehicle fire.</p>
+                    
+                     </section>
+                    <section>     
+                        <p>For more details visit the <a href="https://www.vehiclerecalls.gov.au/recalls/rec-005458">https://www.vehiclerecalls.gov.au/recalls/rec-005458</a>.</p>
+                    </section>
+
+                </div>
+            </div>
+
+            <div class="written-off information">
+                <div class="header-minor hidden">
+                    <img class="icon" src="icons/icon_tick.svg">
+                    <h3>Not recorded as written-off</h3>
+                    <div class="accordion arrow-side" onclick="display_content(this);"></div>
+                </div>
+                <div class="content-hidden">
+                    <p>This vehicle has not been recorded as written off.</p>
+                    <p>Written off data is recorded by state and territory road transport authorities.</p>
+                </div>
+            </div>
+
+            <div class="car-info information">
+                <div class="header-minor expanded">
+                    <img class="icon" src="icons/icon_car.svg">
+                    <h3>About your Car Check</h3>
+                    <div class="accordion arrow-down" onclick="display_content(this);"></div>
+                </div>
+                <div class="content-minor">
+                   <section>
+                    <p>This PPSR Car Check reflects the data contained in the PPSR at 08/02/2023 14:54:29 (Canberra Time).</p>
+                    <p>Your reference number is 4 (search number).</p>
+                    <p>View your <a href="sample-PPSR-search-certificate.pdf">search certificate</a>.</p>
+                    <p>A link to the results, a receipt and further details about your search results have been emailed to you.</p>
+                    <p>As written off, stolen and recall data (NEVDIS information) is not managed or maintained by us, we have no control over its accuracy or availability.</p>
+                    <p>We do not provide refunds when this information is incorrect or unavailable.</p>
+                    <p>Stolen vehicle information is not available on NEVDIS for Tasmanian vehicles. If you are buying a car that is registered in Tasmania, you will need to conduct a search on the Transport Tasmania website.</p>
+                    </section>
+                   <section>
+                    <p class="terms">Access to and use of data provided through the PPSR is subject to the PPSR General Conditions of Use and applicable third-party data conditions (which can be obtained at <a href="#">www.ppsr.gov.au</a>). To the extent permitted by law, all data provided through the PPSR is made available without any representation or warranty of any kind (without limitation in respect to accuracy) and the Commonwealth, and our third-party data providers (which includes any person mentioned in the Third Party Data Conditions as providing information through the PPSR), have no liability to you in respect of any loss or damage that you might suffer no matter how arising (including negligence) that is directly or indirectly related to the NEVDIS Data.</p>
+                    </section>
+                </div>
+            </div>
+            
+              <div class="survey information">
+                <div class="header-minor expanded">
+                    <img class="icon" src="icons/icon_tick.svg">
+                    <h3>Help us improve the PPSR</h3>
+                    <div class="accordion arrow-down" onclick="display_content(this);"></div>
+                </div>
+                <div class="content-minor">
+                    <section>
+                        <p>Your feedback is important to us.</p>
+                        <p>Our optional short survey will take less than a minute to complete.</p>
+                    </section>
+                    <section>
+                        <p><strong>How did you find the PPSR Car Check?</strong></p>
+                        <input type="radio" id="very-easy" class="survey-option-input" name="survey">
+                        <label for="very-easy" class="survey-option-label">Very easy</label><br>
+
+                        <input type="radio" id="fairly-easy" class="survey-option-input" name="survey">
+                        <label for="fairly-easy" class="survey-option-label">Fairly easy</label><br>
+
+                        <input type="radio" id="somewhat-difficult" class="survey-option-input" name="survey">
+                        <label for="somewhat-difficult" class="survey-option-label">Somewhat difficult</label><br>
+
+                        <input type="radio" id="very-difficult" class="survey-option-input" name="survey">
+                        <label for="very-difficult" class="survey-option-label">Very difficult</label>
+                    </section>
+                    <section>
+                        <p><strong>What would you improve?</strong></p>
+                        <p>We're unable to respond to individual comments or suggestions in this survey, please do not include any personal information, e.g. email address or phone number. To discuss specific feedback with us, please email <a href="#">enquiries@ppsr.gov.au</a>.</p>
+                    </section>
+                    <section>
+                        <textarea style="width:200px; height:250px;"></textarea>
+                    </section>
+                </div>
+                <input type="submit" value="Submit my survey feedback" class="button">
+            </div>
+
+
+        </div>  
+
+      </section>
+      <section class="footer">
+
+      </section>
+  </div>
+
+
+</body>
+</html>
