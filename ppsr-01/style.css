@@ -199,9 +199,9 @@ label a{
 }
 
 .accordion {
-  border-radius: 50%; 
-  border: 1px solid gray; 
-  width: 2.5rem; 
+  border-radius: 50%;
+  border: 1px solid gray;
+  width: 2.5rem;
   height: 2rem;
   align-self: center;
   background-position: 50% 50%;
@@ -209,7 +209,7 @@ label a{
   background-repeat: no-repeat;
   background-size: 1rem,1rem;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23313131' d='M64 0l64 64-16 16-64-64'/%3E%3Cpath fill='%23313131' d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
-  
+
 }
 
 .arrow-down {
@@ -221,12 +221,12 @@ label a{
 }
 
 .header-minor {
- padding: 0 1rem 0 1rem; 
- border-top-left-radius: 0.5rem; 
+ padding: 0 1rem 0 1rem;
+ border-top-left-radius: 0.5rem;
  border-top-right-radius: 0.5rem;
  display: flex;
  justify-content: space-between;
- border-bottom: 1px solid gray; 
+ border-bottom: 1px solid gray;
 }
 
 .car-info .header-minor {
@@ -242,18 +242,18 @@ label a{
 }
 
 .expanded {
-  border-bottom-left-radius: 0rem; 
+  border-bottom-left-radius: 0rem;
   border-bottom-right-radius: 0rem;
-  
+
 }
 
 .hidden {
-  border-bottom-left-radius: 0.5rem; 
+  border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
 
 .header-minor h3 {
-  margin: 0; 
+  margin: 0;
   align-self: center;
   width: 100%;
   text-align: left;
@@ -266,7 +266,7 @@ label a{
 }
 
 .information {
-  border-radius: 0.5rem; 
+  border-radius: 0.5rem;
   border: 1px solid gray;
   margin-bottom: 1rem;
 }
@@ -290,7 +290,7 @@ font-weight: normal;
 
 .survey-option-input {
  display: inline;
- width: 10%; 
+ width: 10%;
 }
 
 strong {
@@ -301,5 +301,15 @@ section {
  margin-bottom: 1rem;
 }
 
+.summary-header {
+ text-decoration: underline;
+}
 
+.search-email {
+  color: black;
+  font-family: "Roboto", "Arial";
+} 
 
+.bold-field {
+  font-weight: 700;
+}
